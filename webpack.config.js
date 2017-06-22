@@ -42,6 +42,7 @@ if (process.env.NODE_ENV === 'production') {
   config.plugins.push(
     new BabiliPlugin()
   )
+  config.output.publicPath = '/github-arena/'
 }
 
 module.exports = config
