@@ -2,6 +2,7 @@ import React from 'react'
 import queryString from 'query-string'
 import { battle } from '../utils/api'
 import Player from './Results/Player'
+import Loading from './Loading'
 
 class Results extends React.Component {
   constructor (props) {
@@ -31,7 +32,7 @@ class Results extends React.Component {
   render () {
     if (this.state.loading) {
       return (
-        <p>Loading</p>
+        <Loading />
       )
     } 
     if (this.state.error) {

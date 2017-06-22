@@ -2,6 +2,7 @@ import React from 'react'
 import SelectLanguage from './Popular/SelectLanguage'
 import { fetchPopularRepos } from '../utils/api'
 import RepoGrid from './Popular/RepoGrid'
+import Loading from './Loading'
 
 class Popular extends React.Component {
   constructor (props) {
@@ -38,7 +39,7 @@ class Popular extends React.Component {
         {
           this.state.repos ?
             <RepoGrid repos={this.state.repos} /> :
-            <p>Loading</p>
+            <Loading />
         }
       </div>
     )
